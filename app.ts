@@ -1,8 +1,10 @@
 //how TS handles objects is instead of checking key value pairs, it checks key datatype pairs
-//hobver over the person object for an example
+//hover over the person object for an example
+//object is also a built in type
+
 const person = {
   name: "Sean",
   age: 28,
 };
 
-console.log(person);
+console.log(person.name);
