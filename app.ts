@@ -7,8 +7,10 @@ const person = {
   name: "Sean",
   age: 28,
   hobbies: ["Coding", "Working out", 5, true],
+  role: [2, "author"],
 };
 
+console.log(person.name);
 //This commented out portion is the declarative way of assigning object types but is not optimal as it can be inferred
 /*
   const person: {
@@ -34,4 +36,18 @@ for (let workout of favoriteWorkouts) {
 let otherTypes: (boolean | number | string)[];
 otherTypes = [true, 22, "string"];
 
-// console.log(person.name);
+//Tuple Datatype
+//A Tuple datatype is a fixed-length array/fixed-type array
+//A Tuple has exactly two elements because a user can only have one role a is made up of two elements
+const user: {
+  username: string;
+  role: [number, string]; //For a Tuple it is not inferred so we need to declare it and this is how
+} = {
+  username: "Sean",
+  role: [2, "admin"],
+};
+
+//push is an exception for tuples, even though we're declaring the length of the tuple
+//the below code works:
+user.role.push("user");
+//but if were to hard code it user.role = [2, "admin", "other"] it would give us an error
