@@ -51,3 +51,36 @@ const user: {
 //the below code works:
 user.role.push("user");
 //but if were to hard code it user.role = [2, "admin", "other"] it would give us an error
+
+//Enum Datatype
+// Enum Datatype allows us to to define a set of named constants. Using enums can make it easier to document intent, or create a set of distinct cases. TypeScript provides both numeric and string-based enums.
+//ex: enum { NEW, OLD }
+
+enum Role {
+  ADMIN,
+  READ_ONLY,
+  AUTHOR,
+} // Note* Enums do not have to be uppercase, it is just convention, it will still work with lowecase
+
+//If you don't want to start at an index of 0 and say want to start with the number 5
+/*
+enum Role {
+  ADMIN = 5,
+  READ_ONLY,
+  AUTHOR,
+}
+*/
+
+const newUser = {
+  name: "Sean",
+  age: 28,
+  hobbies: ["Coding", "Fitness", "Cooking"],
+  role: Role.ADMIN,
+};
+
+if (newUser.role === Role.ADMIN) {
+  console.log("is admin");
+}
+
+//In this case what enums is doing is assigning labels to numbers
+//run tsc app.ts and you will see what the compled JS code looks like
