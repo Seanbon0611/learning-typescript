@@ -62,7 +62,7 @@ enum Role {
   AUTHOR,
 } // Note* Enums do not have to be uppercase, it is just convention, it will still work with lowecase
 
-//If you don't want to start at an index of 0 and say want to start with the number 5
+//If you don't want to start at a value of 0 and say want to start with the number 5
 /*
 enum Role {
   ADMIN = 5,
