@@ -1,8 +1,9 @@
-//Union Types
+//Union Types & Literal Types
 function combine(
   i1: number | string,
   i2: number | string,
-  resultConversion: string
+  //literal types will only allow in this example, these two string as options to pass in. anything else and it will throw an error
+  resultConversion: "as-number" | "as-text" //Liter types example
 ) {
   let result;
   //here we have to specify make make sure that when we're adding two values  that they are of the same data type
