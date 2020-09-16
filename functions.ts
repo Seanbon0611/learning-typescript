@@ -31,7 +31,7 @@ function alert(): void {
 let combineValues: Function;
 
 //shows an error because the value we can assign it must be a function
-combineValues = 5;
+// combineValues = 5;
 
 combineValues = add;
 
@@ -49,4 +49,19 @@ let combineValues2: (a: number, b: number) => number;
 //Here we are telling TS that combineValues2 can only store a function, and that it may only hold numbers as it's arguments and that it will also return a number
 
 //see how if we try to assign the sayhi function again, we get an error
-combineValues2 = sayhi;
+// combineValues2 = sayhi;
+
+//Callback Functions
+
+//here say we were have a callback function as a parameter and that a number must be passed in as an argument and that it will return a void data type
+function addAndHandle(n1: number, n2: number, callBack: (a: number) => void) {
+  const result = n1 + n2;
+  callBack(result);
+}
+
+addAndHandle(10, 20, (result) => {
+  console.log(result);
+  //notice how even though we are return result(which is a number) we are not getting an error even though it is to return a void data type
+  //What void is doing here it is ignoring any result you might be returning
+  return result;
+});
