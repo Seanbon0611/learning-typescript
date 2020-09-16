@@ -17,3 +17,15 @@ if (typeof userInput === "string") {
   userName = userInput;
 }
 //here we are saying ONLY if userInput is a string, assign userName to be UserInput
+
+//Never Data Type
+
+//The Never Data Type never produces a value
+//In the function below the function "never" resolves, it stops once we throw an error
+function generateError(message: string, code: number): never {
+  throw { message: message, errorCode: code };
+  //another example of a function that would return as never is a function with an infinite loop:
+  //while (true) {}
+}
+
+generateError("Internal Server Error", 500);
