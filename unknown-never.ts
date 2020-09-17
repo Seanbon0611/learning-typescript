@@ -7,7 +7,7 @@ let userInput: unknown;
 //But when we create a new variable that takes a string and try to attatch our userInput data type to it, we get an error
 //as Unknown is not guarenteed to be a string, it is just unknown at the time
 let userName: string;
-userName = userInput;
+// userName = userInput;
 
 //But if you were two flip these two, it would work
 userInput = userName;
