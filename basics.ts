@@ -9,9 +9,12 @@ function add(n1: number, n2: number, showResult: boolean, phrase: string) {
   }
 }
 
+//In the example above we are using examples of each one of the basic data types and their use case
+
 const number1 = 1;
 const number2 = 5.6;
 
-const printResult = 5;
+const printResult = true;
+
 const resultPhrase = "Result is ";
 const result = add(number1, number2, printResult, resultPhrase);
